@@ -1,0 +1,9 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "Palmshed Official",
+  "description": "Official Palmshed plugin marketplace",
+  "owner": {
+    "name": "Palmshed"
+  },
+  "plugins": []
+}
