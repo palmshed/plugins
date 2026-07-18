@@ -89,6 +89,11 @@ pre code {
 
 .logo:hover { text-decoration: none; }
 
+.logo img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
 .logo-icon { color: var(--accent); }
 
 .nav-links {
