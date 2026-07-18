@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "plugins": {
+    "code-review": {
+      "sha": "9b3ebc0fbf60d37e9d20bc7e346c0e0f41e12d81",
+      "components": {
+        "skills": [
+          {
+            "name": "code-review",
+            "description": "Strict maintainability review for abstraction quality, file size, and spaghetti-condition growth"
+          }
+        ],
+        "commands": [],
+        "agents": [],
+        "mcpServers": [],
+        "hooks": [],
+        "lspServers": []
+      }
+    }
+  }
+}

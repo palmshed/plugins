@@ -37,3 +37,5 @@ plugins/
 - [Mull docs](https://github.com/palmshed/mull)
 - [Plugin manifest spec](https://github.com/palmshed/mull/tree/main/crates/codegen/mull-agent/src/plugins)
 - [Marketplace index spec](https://github.com/palmshed/mull/tree/main/crates/codegen/mull-plugin-marketplace/src/index.rs)
+- [Contributing](./CONTRIBUTING.md)
+- [License](./LICENSE)
