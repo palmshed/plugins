@@ -1,6 +1,4 @@
 (function() {
-  if (window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') return;
-
   var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var storageKey = 'nuntius-design';
   var root = document.documentElement;
