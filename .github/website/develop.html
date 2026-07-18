@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Palmshed ~ Develop</title>
+    <meta name="description" content="Build a plugin for Mull. Skills, agents, commands, and MCP servers." />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+  </head>
+  <body>
+    <nav>
+      <span class="nav-mark">palmshed</span>
+      <ul class="nav-links" id="nav">
+        <li><a href="./index.html">Plugins</a></li>
+        <li><a href="./develop.html" class="active">Develop</a></li>
+        <li><a href="https://github.com/palmshed/plugins">GitHub</a></li>
+      </ul>
+      <button class="mobile-menu-toggle" aria-label="Menu" aria-expanded="false">Menu</button>
+    </nav>
+
+    <div class="hero hero-short">
+      <div class="hero-content">
+        <h1>Build a plugin</h1>
+        <p>A plugin is a directory with a manifest and one or more component types. Mull discovers them from the filesystem.</p>
+      </div>
+    </div>
+
+    <div class="page">
+      <section>
+        <h2>Directory structure</h2>
+        <pre><code>plugins/
+  my-plugin/
+    plugin.json
+    skills/
+      my-skill/
+        SKILL.md
+    commands/
+      deploy.md
+    agents/
+      reviewer.md
+    .mcp.json</code></pre>
+      </section>
+
+      <section>
+        <h2>Manifest</h2>
+        <p>Create a <code>plugin.json</code> at the plugin root. Only <code>name</code> is required.</p>
+        <pre><code>{
+  "name": "my-plugin",
+  "description": "What it does",
+  "version": "1.0.0",
+  "author": { "name": "You" },
+  "skills": "./skills",
+  "commands": "./commands",
+  "agents": "./agents",
+  "mcpServers": "./.mcp.json"
+}</code></pre>
+        <p class="subtext">Field names are camelCase. Unknown fields are ignored. Paths are relative to the plugin root.</p>
+      </section>
+
+      <section>
+        <h2>Skills</h2>
+        <p>A skill is a directory containing a <code>SKILL.md</code> file. The directory name becomes the skill name.</p>
+        <pre><code>---
+name: my-skill
+description: What this skill does
+when-to-use: When the user asks for X
+allowed-tools:
+  - Bash
+  - Read
+---
+
+# Instructions
+
+Your markdown body goes here.</code></pre>
+        <p class="subtext">Frontmatter keys: <code>name</code>, <code>description</code>, <code>when-to-use</code>, <code>allowed-tools</code>, <code>paths</code>, <code>model</code>, <code>effort</code>, <code>user-invocable</code>, <code>disable-model-invocation</code>.</p>
+      </section>
+
+      <section>
+        <h2>Commands</h2>
+        <p>Any <code>.md</code> file in a <code>commands/</code> directory. The filename stem becomes the command name.</p>
+        <pre><code>commands/
+  deploy.md    &rarr;  /deploy
+  lint.md      &rarr;  /lint</code></pre>
+      </section>
+
+      <section>
+        <h2>Agents</h2>
+        <p>Any <code>.md</code> file in an <code>agents/</code> directory. The filename stem becomes the agent name.</p>
+        <pre><code>agents/
+  reviewer.md  &rarr;  reviewer agent
+  tester.md    &rarr;  tester agent</code></pre>
+      </section>
+
+      <section>
+        <h2>MCP servers</h2>
+        <p>Add a <code>.mcp.json</code> at the plugin root with your server configuration.</p>
+        <pre><code>{
+  "mcpServers": {
+    "my-server": {
+      "command": "node",
+      "args": ["./server.js"]
+    }
+  }
+}</code></pre>
+      </section>
+
+      <section>
+        <h2>Register in the marketplace</h2>
+        <p>Add your plugin to <code>.mull-plugin/marketplace.json</code> in the repo root.</p>
+        <pre><code>{
+  "name": "Palmshed Official",
+  "plugins": [
+    {
+      "name": "my-plugin",
+      "description": "What it does",
+      "source": "./plugins/my-plugin"
+    }
+  ]
+}</code></pre>
+      </section>
+
+      <section>
+        <h2>Plugin name rules</h2>
+        <ul>
+          <li>Lowercase ASCII letters, digits, and hyphens only.</li>
+          <li>1 to 64 characters.</li>
+          <li>Must not start or end with a hyphen.</li>
+        </ul>
+      </section>
+
+      <p class="feedback">Questions? <a href="https://github.com/palmshed/plugins/issues">Open an issue</a>.</p>
+    </div>
+
+    <footer>
+      <p>&copy; 2026 Palmshed</p>
+      <ul class="footer-links">
+        <li><a href="https://github.com/palmshed/mull">Mull</a></li>
+        <li><a href="https://github.com/palmshed/plugins">GitHub</a></li>
+      </ul>
+    </footer>
+
+    <script>
+      (function() {
+        var toggle = document.querySelector('.mobile-menu-toggle');
+        var nav = document.getElementById('nav');
+        if (!toggle || !nav) return;
+        function sync() { toggle.setAttribute('aria-expanded', nav.classList.contains('active')); }
+        toggle.addEventListener('click', function(e) {
+          e.stopPropagation();
+          nav.classList.toggle('active');
+          sync();
+        });
+        document.addEventListener('click', function(e) {
+          if (nav.classList.contains('active') && !nav.contains(e.target) && e.target !== toggle) {
+            nav.classList.remove('active');
+            sync();
+          }
+        });
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape' && nav.classList.contains('active')) {
+            nav.classList.remove('active');
+            sync();
+            toggle.focus();
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>
