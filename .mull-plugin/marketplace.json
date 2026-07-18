@@ -5,5 +5,11 @@
   "owner": {
     "name": "Palmshed"
   },
-  "plugins": []
+  "plugins": [
+    {
+      "name": "code-review",
+      "description": "Extremely strict maintainability review for abstraction quality, file size, and spaghetti-condition growth",
+      "source": "./plugins/code-review"
+    }
+  ]
 }

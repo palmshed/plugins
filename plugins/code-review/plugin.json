@@ -1,0 +1,9 @@
+{
+  "name": "code-review",
+  "description": "Extremely strict maintainability review for abstraction quality, file size, and spaghetti-condition growth",
+  "version": "1.0.0",
+  "author": {
+    "name": "Palmshed"
+  },
+  "skills": "./skills"
+}
