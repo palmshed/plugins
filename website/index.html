@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Palmshed Plugins</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo">
+        <span class="logo-icon">◆</span> Palmshed
+      </a>
+      <div class="nav-links">
+        <a href="#plugins">Plugins</a>
+        <a href="#develop">Develop</a>
+        <a href="https://github.com/palmshed/plugins" target="_blank">GitHub</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <div class="hero-badge">OPEN SOURCE</div>
+      <h1>Extend <span class="accent">Mull</span> with plugins.</h1>
+      <p class="hero-sub">Skills, agents, commands, and MCP servers. Install with one command.</p>
+      <div class="hero-install">
+        <code>mull plugins add git+https://github.com/palmshed/plugins.git</code>
+      </div>
+    </div>
+  </header>
+
+  <section id="plugins" class="section">
+    <div class="container">
+      <h2>Available Plugins</h2>
+      <div class="plugin-grid" id="plugin-list">
+        <div class="plugin-card">
+          <div class="plugin-header">
+            <h3>code-review</h3>
+            <span class="plugin-badge">skill</span>
+          </div>
+          <p>Extremely strict maintainability review for abstraction quality, file size, and spaghetti-condition growth.</p>
+          <div class="plugin-meta">
+            <span class="author">Palmshed</span>
+            <span class="version">v1.0.0</span>
+          </div>
+          <pre class="plugin-install">mull plugins add git+https://github.com/palmshed/plugins.git#code-review</pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="develop" class="section section-alt">
+    <div class="container">
+      <h2>Build a Plugin</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h3>Create the directory</h3>
+          <pre><code>plugins/my-plugin/
+├── plugin.json
+└── skills/
+    └── my-skill/
+        └── SKILL.md</code></pre>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <h3>Write the manifest</h3>
+          <pre><code>{
+  "name": "my-plugin",
+  "description": "What it does",
+  "version": "1.0.0",
+  "skills": "./skills"
+}</code></pre>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <h3>Register it</h3>
+          <pre><code>{
+  "name": "Palmshed Official",
+  "plugins": [
+    {
+      "name": "my-plugin",
+      "source": "./plugins/my-plugin"
+    }
+  ]
+}</code></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Plugin Structure</h2>
+      <div class="structure-table">
+        <div class="structure-row">
+          <div class="structure-icon">📜</div>
+          <div>
+            <h4>Skills</h4>
+            <p>Drop a <code>SKILL.md</code> in <code>skills/&lt;name&gt;/</code>. YAML frontmatter + markdown body.</p>
+          </div>
+        </div>
+        <div class="structure-row">
+          <div class="structure-icon">⚡</div>
+          <div>
+            <h4>Commands</h4>
+            <p>Add any <code>.md</code> file in <code>commands/</code>. Filename becomes the command name.</p>
+          </div>
+        </div>
+        <div class="structure-row">
+          <div class="structure-icon">🤖</div>
+          <div>
+            <h4>Agents</h4>
+            <p>Add any <code>.md</code> file in <code>agents/</code>. Filename becomes the agent name.</p>
+          </div>
+        </div>
+        <div class="structure-row">
+          <div class="structure-icon">🔌</div>
+          <div>
+            <h4>MCP Servers</h4>
+            <p>Add <code>.mcp.json</code> at the plugin root with your server config.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Built by <a href="https://palmshed.ai">Palmshed</a>. Powered by <a href="https://github.com/palmshed/mull">Mull</a>.</p>
+    </div>
+  </footer>
+</body>
+</html>
