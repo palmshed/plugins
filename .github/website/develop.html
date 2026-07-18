@@ -10,13 +10,16 @@
     <link rel="icon" type="image/x-icon" href="./favicon.ico" />
   </head>
   <body>
+    <script>
+      (function(){var k='palmshed-design';var v=sessionStorage.getItem(k);if(v==='previous'){document.documentElement.dataset.design='previous'}})();
+    </script>
     <nav>
       <span class="nav-mark">palmshed</span>
       <ul class="nav-links" id="nav">
         <li><a href="./index.html">Plugins</a></li>
         <li><a href="./develop.html" class="active">Develop</a></li>
         <li><a href="https://github.com/palmshed/plugins">GitHub</a></li>
-        <li><a href="#" id="design-link">Design</a></li>
+        <li><a href="#" id="design-link" onclick="var d=document.documentElement;var k='palmshed-design';var v=sessionStorage.getItem(k)||'current';v=v==='current'?'previous':'current';sessionStorage.setItem(k,v);if(v==='previous'){d.dataset.design='previous'}else{delete d.dataset.design};return false">Design</a></li>
       </ul>
       <button class="mobile-menu-toggle" aria-label="Menu" aria-expanded="false">Menu</button>
     </nav>

@@ -1,6 +1,6 @@
 (function() {
   var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var storageKey = 'nuntius-design';
+  var storageKey = 'palmshed-design';
   var root = document.documentElement;
   var hideTimer = null;
 
