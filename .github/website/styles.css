@@ -59,10 +59,19 @@ nav {
 }
 
 .nav-mark {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   font-size: 0.875rem;
   font-weight: 500;
   color: var(--text-secondary);
   letter-spacing: 0.02em;
+}
+
+.nav-icon {
+  width: 1rem;
+  height: 1rem;
+  display: none;
 }
 
 .nav-links a {
@@ -575,6 +584,13 @@ html[data-design="previous"] .nav-mark {
   font-size: 1rem;
   color: var(--text);
   letter-spacing: 0;
+}
+
+html[data-design="previous"] .nav-icon {
+  display: block;
+  width: 1.25rem;
+  height: 1.25rem;
+  opacity: 0.7;
 }
 
 html[data-design="previous"] .nav-links {
