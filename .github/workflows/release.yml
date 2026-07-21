@@ -1,0 +1,39 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate plugins
+        run: bash scripts/validate.sh
+
+      - name: Regenerate marketplace files
+        run: bash scripts/generate.sh
+
+      - name: Run evaluation suite
+        run: bash eval/runner.sh
+
+      - name: Check documentation freshness
+        run: bash scripts/docs-freshness.sh
+
+      - name: Generate release notes
+        run: bash scripts/release-notes.sh
+
+      - name: Create GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          body_path: .release-notes.md
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

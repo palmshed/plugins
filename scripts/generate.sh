@@ -9,6 +9,11 @@ out_dir=".mull-plugin"
 marketplace_file="$out_dir/marketplace.json"
 index_file="$out_dir/plugin-index.json"
 
+# Repository version from git tag or default
+REPO_VERSION="${GITHUB_REF_NAME:-dev}"
+# Strip leading 'v' if present
+REPO_VERSION="${REPO_VERSION#v}"
+
 mkdir -p "$out_dir"
 
 pass() { printf "  ✓ %s\n" "$1"; }
@@ -81,6 +86,7 @@ cat > "$marketplace_file" <<EOF
   "\$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "Palmshed Official",
   "description": "Official Palmshed plugin marketplace",
+  "version": "$REPO_VERSION",
   "owner": {
     "name": "Palmshed"
   },
