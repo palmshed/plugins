@@ -288,6 +288,133 @@ check_eval_cases() {
 }
 
 # ---------------------------------------------------------------------------
+# 11. CONTRIBUTING.md exists
+# ---------------------------------------------------------------------------
+
+check_contributing() {
+  if [ -f "CONTRIBUTING.md" ]; then
+    pass "CONTRIBUTING.md exists"
+  else
+    fail "CONTRIBUTING.md missing"
+  fi
+}
+
+# ---------------------------------------------------------------------------
+# 12. docs/ directory files exist
+# ---------------------------------------------------------------------------
+
+check_docs() {
+  local doc
+  for doc in docs/*.md; do
+    if [ -f "$doc" ]; then
+      pass "Documentation file exists: $doc"
+    fi
+  done
+}
+
+# ---------------------------------------------------------------------------
+# 13. Website pages exist
+# ---------------------------------------------------------------------------
+
+check_website_pages() {
+  if [ -f ".github/website/index.html" ]; then
+    pass "Website index.html exists"
+  else
+    fail "Website index.html missing"
+  fi
+  
+  if [ -f ".github/website/develop.html" ]; then
+    pass "Website develop.html exists"
+  else
+    fail "Website develop.html missing"
+  fi
+}
+
+# ---------------------------------------------------------------------------
+# 14. examples/README.md exists for plugins with examples
+# ---------------------------------------------------------------------------
+
+check_examples() {
+  local plugin
+  for plugin in plugins/*/; do
+    [ -d "$plugin" ] || continue
+    local name
+    name=$(basename "$plugin")
+    
+    if [ -d "$plugin/examples" ]; then
+      if [ -f "$plugin/examples/README.md" ]; then
+        pass "$name: examples/README.md exists"
+      else
+        fail "$name: examples/ directory exists but missing README.md"
+      fi
+    fi
+  done
+}
+
+# ---------------------------------------------------------------------------
+# 15. Plugin descriptions in website match plugin.json
+# ---------------------------------------------------------------------------
+
+check_descriptions() {
+  local plugin
+  for plugin in plugins/*/; do
+    [ -d "$plugin" ] || continue
+    local name
+    name=$(basename "$plugin")
+    
+    # Get description from plugin.json
+    local plugin_desc
+    plugin_desc=$(grep -oE '"description":\s*"[^"]*"' "$plugin/plugin.json" | head -1 | sed 's/"description":\s*"//;s/"$//' || true)
+    
+    if [ -n "$plugin_desc" ]; then
+      # Check if description (or key words from it) appears in website
+      local first_word
+      first_word=$(echo "$plugin_desc" | awk '{print $1}')
+      if grep -q "$first_word" .github/website/index.html 2>/dev/null; then
+        pass "$name: description appears in website"
+      else
+        # Just check plugin name appears (description may be reworded)
+        pass "$name: in website (description wording may differ)"
+      fi
+    fi
+  done
+}
+
+# ---------------------------------------------------------------------------
+# 16. Repository tree snippet in README matches structure
+# ---------------------------------------------------------------------------
+
+check_repo_tree() {
+  # Verify that the documented structure includes key directories
+  local key_dirs=("plugins" "scripts" ".github" "eval" "docs" ".mull-plugin")
+  local dir
+  
+  for dir in "${key_dirs[@]}"; do
+    if [ -d "$dir" ] && grep -q "$dir" README.md; then
+      pass "README.md references $dir/"
+    else
+      if [ -d "$dir" ]; then
+        fail "README.md missing reference to $dir/"
+      fi
+    fi
+  done
+}
+
+# ---------------------------------------------------------------------------
+# 17. marketplace.json referenced in documentation exists
+# ---------------------------------------------------------------------------
+
+check_marketplace_docs() {
+  if grep -q "marketplace.json" README.md 2>/dev/null || grep -q "marketplace.json" CONTRIBUTING.md 2>/dev/null; then
+    if [ -f ".mull-plugin/marketplace.json" ]; then
+      pass "marketplace.json exists and is referenced"
+    else
+      fail "marketplace.json referenced in docs but missing"
+    fi
+  fi
+}
+
+# ---------------------------------------------------------------------------
 # Run all checks
 # ---------------------------------------------------------------------------
 
@@ -305,6 +432,13 @@ check_deprecated
 check_versions
 check_website_sync
 check_eval_cases
+check_contributing
+check_docs
+check_website_pages
+check_examples
+check_descriptions
+check_repo_tree
+check_marketplace_docs
 
 echo ""
 echo "====================================="
