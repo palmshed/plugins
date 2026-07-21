@@ -6,7 +6,7 @@ disable-model-invocation: true
 
 # System Design Review
 
-Use this skill for an architectural review of the current branch's changes. The goal is to catch design problems — not to enforce a single architecture, but to ensure changes are consistent with the project's structure and do not introduce coupling, ambiguity, or scalability issues.
+Use this skill for an architectural review of the current branch's changes. The goal is to catch design problems ~ not to enforce a single architecture, but to ensure changes are consistent with the project's structure and do not introduce coupling, ambiguity, or scalability issues.
 
 ## Core Prompt
 
@@ -86,11 +86,11 @@ Use this skill for an architectural review of the current branch's changes. The 
 
 ## Severity Levels
 
-**Critical** — Architectural decision that causes data loss, security issues, or prevents the system from scaling to meet requirements.
-**High** — Design problem that significantly increases maintenance burden or blocks future development.
-**Medium** — Structural inconsistency that makes the codebase harder to navigate or modify.
-**Low** — Minor organizational improvement that would help clarity.
-**Informational** — Style or preference that does not affect correctness or maintainability.
+**Critical** ~ Architectural decision that causes data loss, security issues, or prevents the system from scaling to meet requirements.
+**High** ~ Design problem that significantly increases maintenance burden or blocks future development.
+**Medium** ~ Structural inconsistency that makes the codebase harder to navigate or modify.
+**Low** ~ Minor organizational improvement that would help clarity.
+**Informational** ~ Style or preference that does not affect correctness or maintainability.
 
 ## What to Flag Aggressively
 
@@ -130,16 +130,16 @@ Be direct and specific. Name the design problem and its concrete impact.
 
 Good phrases:
 
-- `this module now depends on three unrelated modules — high coupling`
-- `this internal type leaks across the public API — abstraction boundary broken`
-- `this global configuration is modified in two places — unclear ownership`
-- `this business logic is tangled with the HTTP handler — untestable`
-- `this collection grows without bound — will exhaust memory under load`
-- `this error is caught and re-thrown as a generic error — context lost`
-- `these two modules handle the same problem differently — inconsistency`
-- `this module does too much — should be split`
-- `this abstraction adds indirection without clarifying intent — over-designed`
-- `the dependency direction is inverted — high-level module depends on low-level detail`
+- `this module now depends on three unrelated modules ~ high coupling`
+- `this internal type leaks across the public API ~ abstraction boundary broken`
+- `this global configuration is modified in two places ~ unclear ownership`
+- `this business logic is tangled with the HTTP handler ~ untestable`
+- `this collection grows without bound ~ will exhaust memory under load`
+- `this error is caught and re-thrown as a generic error ~ context lost`
+- `these two modules handle the same problem differently ~ inconsistency`
+- `this module does too much ~ should be split`
+- `this abstraction adds indirection without clarifying intent ~ over-designed`
+- `the dependency direction is inverted ~ high-level module depends on low-level detail`
 
 ## Approval Bar
 

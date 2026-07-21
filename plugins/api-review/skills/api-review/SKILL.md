@@ -6,7 +6,7 @@ disable-model-invocation: true
 
 # API Design Review
 
-Use this skill for a thorough review of API design. The goal is to ensure APIs are consistent, ergonomic, well-documented, and backward compatible — not to enforce a single style, but to catch design problems before they become permanent.
+Use this skill for a thorough review of API design. The goal is to ensure APIs are consistent, ergonomic, well-documented, and backward compatible ~ not to enforce a single style, but to catch design problems before they become permanent.
 
 ## Core Prompt
 
@@ -90,11 +90,11 @@ Use this skill for a thorough review of API design. The goal is to ensure APIs a
 
 ## Severity Levels
 
-**Critical** — Breaking change without versioning, security hole, or data loss risk.
-**High** — Ergonomic issue that affects most consumers, missing documentation for critical paths.
-**Medium** — Inconsistency, minor compatibility concern, missing edge case docs.
-**Low** — Style preference, minor improvement opportunity.
-**Informational** — Suggestion that would improve the API without urgency.
+**Critical** ~ Breaking change without versioning, security hole, or data loss risk.
+**High** ~ Ergonomic issue that affects most consumers, missing documentation for critical paths.
+**Medium** ~ Inconsistency, minor compatibility concern, missing edge case docs.
+**Low** ~ Style preference, minor improvement opportunity.
+**Informational** ~ Suggestion that would improve the API without urgency.
 
 ## What to Flag Aggressively
 

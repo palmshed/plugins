@@ -6,7 +6,7 @@ disable-model-invocation: true
 
 # Security Code Review
 
-Use this skill for a thorough security review of the current branch's changes. The goal is to catch vulnerabilities before they reach production — not to produce a compliance checkbox, but to find real attack surface.
+Use this skill for a thorough security review of the current branch's changes. The goal is to catch vulnerabilities before they reach production ~ not to produce a compliance checkbox, but to find real attack surface.
 
 ## Core Prompt
 
@@ -74,11 +74,11 @@ Use this skill for a thorough security review of the current branch's changes. T
 
 ## Severity Levels
 
-**Critical** — Directly exploitable, leads to data breach, RCE, or auth bypass.
-**High** — Exploitable with moderate effort, significant impact.
-**Medium** — Requires specific conditions or chained with other issues.
-**Low** — Hardening opportunity, defense-in-depth, defense-in-depth improvement.
-**Informational** — Best practice suggestion, no direct security impact.
+**Critical** ~ Directly exploitable, leads to data breach, RCE, or auth bypass.
+**High** ~ Exploitable with moderate effort, significant impact.
+**Medium** ~ Requires specific conditions or chained with other issues.
+**Low** ~ Hardening opportunity, defense-in-depth, defense-in-depth improvement.
+**Informational** ~ Best practice suggestion, no direct security impact.
 
 ## What to Flag Aggressively
 
@@ -121,12 +121,12 @@ If the code has a real vulnerability, say so.
 
 Good phrases:
 
-- `this passes user input directly into a shell command — command injection`
-- `the token is logged at debug level — credential exposure`
-- `this endpoint has no auth check — any unauthenticated user can reach it`
-- `TLS verification is disabled — MitM possible`
-- `this dependency was published 2 days ago with 3 downloads — supply chain risk`
-- `the file path is constructed from user input without sanitization — path traversal`
+- `this passes user input directly into a shell command ~ command injection`
+- `the token is logged at debug level ~ credential exposure`
+- `this endpoint has no auth check ~ any unauthenticated user can reach it`
+- `TLS verification is disabled ~ MitM possible`
+- `this dependency was published 2 days ago with 3 downloads ~ supply chain risk`
+- `the file path is constructed from user input without sanitization ~ path traversal`
 
 ## Approval Bar
 

@@ -28,11 +28,11 @@ The diff of the current branch against its base.
 
 A severity-rated list of findings across five categories:
 
-- **Critical** — Must fix before merge
-- **High** — Should fix before merge
-- **Medium** — Fix if scope allows
-- **Low** — Improvement opportunity
-- **Informational** — Style or preference
+- **Critical** ~ Must fix before merge
+- **High** ~ Should fix before merge
+- **Medium** ~ Fix if scope allows
+- **Low** ~ Improvement opportunity
+- **Informational** ~ Style or preference
 
 Each finding includes the location, what is wrong, and a concrete fix.
 
@@ -40,7 +40,7 @@ Each finding includes the location, what is wrong, and a concrete fix.
 
 - Focuses on structural quality, not correctness or security
 - Does not measure performance
-- Strict by design — will flag things that are fine in context
+- Strict by design ~ will flag things that are fine in context
 - Does not replace domain-specific review
 
 ## Compatibility

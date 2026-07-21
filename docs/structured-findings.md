@@ -1,6 +1,6 @@
 # Architecture: Structured Review Findings
 
-Status: **Proposed** — not yet implemented.
+Status: **Proposed** ~ not yet implemented.
 
 ## Motivation
 
@@ -16,10 +16,10 @@ Plugins should not know how their output is displayed. Instead, define a common 
 
 ## Design Principles
 
-1. **Presentation-neutral** — Plugins describe what they found, not how to display it.
-2. **Portable** — Same finding works across terminal, PR comments, web UI, and JSON.
-3. **Stable ID** — Each finding has a stable identifier for deduplication, suppression, and analytics.
-4. **Extensible** — Schema accommodates future fields without breaking existing consumers.
+1. **Presentation-neutral** ~ Plugins describe what they found, not how to display it.
+2. **Portable** ~ Same finding works across terminal, PR comments, web UI, and JSON.
+3. **Stable ID** ~ Each finding has a stable identifier for deduplication, suppression, and analytics.
+4. **Extensible** ~ Schema accommodates future fields without breaking existing consumers.
 
 ## Finding Schema
 
@@ -63,9 +63,9 @@ Plugins should not know how their output is displayed. Instead, define a common 
 
 ### Severity semantics
 
-- **error** — Must fix before merge. Security vulnerabilities, data loss risks, broken functionality.
-- **warning** — Should fix before merge. Design problems, performance regressions, missing tests.
-- **info** — Improvement opportunity. Style suggestions, hardening, best practices.
+- **error** ~ Must fix before merge. Security vulnerabilities, data loss risks, broken functionality.
+- **warning** ~ Should fix before merge. Design problems, performance regressions, missing tests.
+- **info** ~ Improvement opportunity. Style suggestions, hardening, best practices.
 
 ### ID format
 

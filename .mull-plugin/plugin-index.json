@@ -2,7 +2,7 @@
   "version": 1,
   "plugins": {
     "api-review": {
-      "sha": "685bca2f275a093af5fb30e9fe482ad3293e96e5301e395f2279e7ecfc223df4",
+      "sha": "9f3156dd5ed785072891738c5be0d1f7ee5fb9b2f4b9e5602d30d1335045e1dc",
       "components": {
         "skills": [
             {
@@ -18,7 +18,7 @@
       }
     },
     "code-review": {
-      "sha": "c821b0357dcf08d1d76831f8bf536c86e6f6bcabbb59e01fb3663bde3148a152",
+      "sha": "e14a444f32a31019d3f6851e04f7d7bd3eca40634ec27965bcfa5816e04d2a4c",
       "components": {
         "skills": [
             {
@@ -34,7 +34,7 @@
       }
     },
     "commit-review": {
-      "sha": "8559268312c907c921e8667acc679fb906c597ecdb4bc54896403cd2484b6a02",
+      "sha": "7f00a70db6ad8b69f7a0350accc906c37617487443a2e2f16288f6616b0d0677",
       "components": {
         "skills": [
             {
@@ -50,7 +50,7 @@
       }
     },
     "debugging": {
-      "sha": "15e3ef98b570c62985d55c68db7686daab1fb6b290972b0507ee2fa4c36f071a",
+      "sha": "f6a32e4ba0619babe94775639f84a8a5a62c66532c0c3d75318b55842bcf93a0",
       "components": {
         "skills": [
             {
@@ -66,7 +66,7 @@
       }
     },
     "documentation": {
-      "sha": "54ac6b9872bb9bdb0412be4dc5fbc10a86bebc0fa0025595a0bba9b574fc2879",
+      "sha": "3f15de897ade9f9ebeb92fbc9a3a0ab373f4906ec60c36608864865958c52060",
       "components": {
         "skills": [
             {
@@ -82,7 +82,7 @@
       }
     },
     "performance-review": {
-      "sha": "77acbefdba411b5cc160342e2f470095b149c64c41025c88cd7335b5fa7f18aa",
+      "sha": "ba7edc89327b66294b4f8602fe0b71c2b5962d9dae626a82820baf3fb30b24a9",
       "components": {
         "skills": [
             {
@@ -98,7 +98,7 @@
       }
     },
     "security-review": {
-      "sha": "798d51c38dd2703932f35d558049af761def60dcd3f1553f2bdb2130d80cd103",
+      "sha": "cbed4daf143a19c25214913998b59d659d0e5243ab66742286aa4bef62ceda86",
       "components": {
         "skills": [
             {
@@ -114,7 +114,7 @@
       }
     },
     "system-design": {
-      "sha": "46387a3a289916e91365d1262c6547264c9578102cce7d0d15a9a3aa91fd6b84",
+      "sha": "7466db37f933f747a57928200453301ceda36de1f9d4bb17f74cc5e0173e2eb0",
       "components": {
         "skills": [
             {
@@ -130,7 +130,7 @@
       }
     },
     "testing": {
-      "sha": "02bf815270604311777e6a2f0a3fbc84e609b8a1a1177991dc3ba71f7ecbf3ef",
+      "sha": "5ea7d4c71f534928c1ccb620fe49d31d5891934e1cac7d54d0a658c6d7dc5bcf",
       "components": {
         "skills": [
             {

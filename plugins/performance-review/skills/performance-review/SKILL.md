@@ -6,7 +6,7 @@ disable-model-invocation: true
 
 # Performance Code Review
 
-Use this skill for a performance review of the current branch's changes. The goal is to catch regressions and waste — not to micro-optimize clean code, but to prevent shipping slow code.
+Use this skill for a performance review of the current branch's changes. The goal is to catch regressions and waste ~ not to micro-optimize clean code, but to prevent shipping slow code.
 
 ## Core Prompt
 
@@ -84,11 +84,11 @@ Use this skill for a performance review of the current branch's changes. The goa
 
 ## Severity Levels
 
-**Critical** — Measurable regression on a hot path, blocks deployment.
-**High** — Noticeable slowdown under realistic load.
-**Medium** — Inefficiency that matters at scale but not today.
-**Low** — Hardening opportunity, not currently impactful.
-**Informational** — Style preference or minor improvement.
+**Critical** ~ Measurable regression on a hot path, blocks deployment.
+**High** ~ Noticeable slowdown under realistic load.
+**Medium** ~ Inefficiency that matters at scale but not today.
+**Low** ~ Hardening opportunity, not currently impactful.
+**Informational** ~ Style preference or minor improvement.
 
 ## What to Flag Aggressively
 
@@ -130,13 +130,13 @@ Do not flag theoretical issues in code that runs once at startup.
 
 Good phrases:
 
-- `this loops O(n²) over unbounded input — quadratic blowup`
-- `this clones the entire config per request — allocation pressure`
-- `this does a synchronous disk read in the request handler — blocks the runtime`
-- `this issues one query per iteration — N+1 pattern`
-- `this reads the entire file into memory — streaming would avoid the allocation`
-- `this logs at info level on every request — hot path noise`
-- `this holds a mutex across an await point — can block the runtime`
+- `this loops O(n²) over unbounded input ~ quadratic blowup`
+- `this clones the entire config per request ~ allocation pressure`
+- `this does a synchronous disk read in the request handler ~ blocks the runtime`
+- `this issues one query per iteration ~ N+1 pattern`
+- `this reads the entire file into memory ~ streaming would avoid the allocation`
+- `this logs at info level on every request ~ hot path noise`
+- `this holds a mutex across an await point ~ can block the runtime`
 
 ## Approval Bar
 

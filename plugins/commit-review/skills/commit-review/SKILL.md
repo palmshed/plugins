@@ -6,7 +6,7 @@ disable-model-invocation: true
 
 # Commit Review
 
-Use this skill for reviewing commit messages and the commit history of a branch. The goal is to ensure commits are clear, well-structured, and useful for future readers — not to enforce a specific convention, but to make the history readable and bisectable.
+Use this skill for reviewing commit messages and the commit history of a branch. The goal is to ensure commits are clear, well-structured, and useful for future readers ~ not to enforce a specific convention, but to make the history readable and bisectable.
 
 ## Core Prompt
 
@@ -58,11 +58,11 @@ Use this skill for reviewing commit messages and the commit history of a branch.
 
 ## Severity Levels
 
-**Critical** — Commit message is factually wrong about what the code does.
-**High** — History is difficult to bisect or understand.
-**Medium** — Message is unclear or missing context.
-**Low** — Style or preference issue.
-**Informational** — Minor improvement suggestion.
+**Critical** ~ Commit message is factually wrong about what the code does.
+**High** ~ History is difficult to bisect or understand.
+**Medium** ~ Message is unclear or missing context.
+**Low** ~ Style or preference issue.
+**Informational** ~ Minor improvement suggestion.
 
 ## What to Flag Aggressively
 

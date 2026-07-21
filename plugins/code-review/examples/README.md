@@ -48,7 +48,7 @@ impl AppConfig {
 ## Bad: Feature logic leaking into shared path
 
 ```rust
-// handler.rs — shared request handler
+// handler.rs ~ shared request handler
 pub async fn handle_request(req: Request) -> Response {
     let user = authenticate(&req).await?;
 
@@ -85,7 +85,7 @@ pub async fn handle_request(req: Request) -> Response {
 ## Bad: File past 1k lines from new code
 
 ```rust
-// service.rs — was 900 lines, now 1200 after this PR
+// service.rs ~ was 900 lines, now 1200 after this PR
 // The PR adds a new "export" feature that duplicates
 // patterns already used for "import" and "sync" features.
 
@@ -159,7 +159,7 @@ let address = result.downcast_ref::<Address>().unwrap();
 
 **Why this is bad:**
 - `Any` type erasure hides the real contract
-- Caller must downcast — runtime failure instead of compile-time safety
+- Caller must downcast ~ runtime failure instead of compile-time safety
 - The abstraction adds indirection without clarifying intent
 - A simple function `parse_address(input: &str) -> Result<Address>` would be clearer
 

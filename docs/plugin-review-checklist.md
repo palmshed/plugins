@@ -62,8 +62,8 @@ Every plugin must satisfy this checklist before release.
 
 ## Release Process
 
-1. Run `bash scripts/validate.sh` — must pass
-2. Run `bash scripts/generate.sh` — regenerate marketplace files
+1. Run `bash scripts/validate.sh` ~ must pass
+2. Run `bash scripts/generate.sh` ~ regenerate marketplace files
 3. Verify all checklist items above
 4. Bump version in plugin.json
 5. Update CHANGELOG.md

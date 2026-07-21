@@ -6,7 +6,7 @@ disable-model-invocation: true
 
 # Documentation Review
 
-Use this skill for a documentation review of the current branch's changes. The goal is to ensure documentation is accurate, useful, and complete — not to produce more docs, but to make sure what exists actually helps.
+Use this skill for a documentation review of the current branch's changes. The goal is to ensure documentation is accurate, useful, and complete ~ not to produce more docs, but to make sure what exists actually helps.
 
 ## Core Prompt
 
@@ -40,7 +40,7 @@ Use this skill for a documentation review of the current branch's changes. The g
 - Explanations that assume context the reader may not have
 - Jargon or terminology used without definition
 - Unclear examples that do not demonstrate the common case
-- Missing "why" — telling what to do without explaining why
+- Missing "why" ~ telling what to do without explaining why
 - Wall of text where structure would help
 
 ### 4. Examples
@@ -87,15 +87,15 @@ Use this skill for a documentation review of the current branch's changes. The g
 
 ## Severity Levels
 
-**Critical** — Documentation is wrong in a way that causes users to take dangerous actions or misconfigure security-sensitive settings.
-**High** — Documentation is wrong or missing for a common use case or public API.
-**Medium** — Documentation is incomplete, unclear, or slightly outdated.
-**Low** — Minor style, clarity, or organizational issues.
-**Informational** — Suggestions that would improve the docs but are not urgent.
+**Critical** ~ Documentation is wrong in a way that causes users to take dangerous actions or misconfigure security-sensitive settings.
+**High** ~ Documentation is wrong or missing for a common use case or public API.
+**Medium** ~ Documentation is incomplete, unclear, or slightly outdated.
+**Low** ~ Minor style, clarity, or organizational issues.
+**Informational** ~ Suggestions that would improve the docs but are not urgent.
 
 ## What to Flag Aggressively
 
-- Documentation that contradicts the code — users will follow the docs and get wrong results
+- Documentation that contradicts the code ~ users will follow the docs and get wrong results
 - Missing documentation for public API
 - Broken or outdated examples
 - Security-sensitive configuration not documented
@@ -128,10 +128,10 @@ Be direct and specific. Say what is wrong and how to fix it.
 
 Good phrases:
 
-- `this example does not work — the function signature changed in v2`
+- `this example does not work ~ the function signature changed in v2`
 - `the README says "easy setup" but the steps are incomplete`
 - `the changelog does not note the breaking change in the config format`
-- `this parameter is not documented — users will not know it exists`
+- `this parameter is not documented ~ users will not know it exists`
 - `the comment says "temporary workaround" but this code has been here for 2 years`
 - `the API docs say it returns a string but it returns an enum`
 - `the example uses a pattern the style guide says to avoid`

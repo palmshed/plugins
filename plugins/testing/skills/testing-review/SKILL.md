@@ -6,7 +6,7 @@ disable-model-invocation: true
 
 # Test Quality Review
 
-Use this skill for a test review of the current branch's changes. The goal is to ensure changes are well-tested — not to demand 100% coverage, but to catch the cases where tests are missing, misleading, or fragile.
+Use this skill for a test review of the current branch's changes. The goal is to ensure changes are well-tested ~ not to demand 100% coverage, but to catch the cases where tests are missing, misleading, or fragile.
 
 ## Core Prompt
 
@@ -83,11 +83,11 @@ Use this skill for a test review of the current branch's changes. The goal is to
 
 ## Severity Levels
 
-**Critical** — Security-sensitive code path has no tests, or tests are misleading.
-**High** — New public API with no test coverage, or error paths untested.
-**Medium** — Edge cases missing, assertions too weak, test isolation issues.
-**Low** — Test organization, naming, or clarity improvements.
-**Informational** — Style suggestions, minor improvements.
+**Critical** ~ Security-sensitive code path has no tests, or tests are misleading.
+**High** ~ New public API with no test coverage, or error paths untested.
+**Medium** ~ Edge cases missing, assertions too weak, test isolation issues.
+**Low** ~ Test organization, naming, or clarity improvements.
+**Informational** ~ Style suggestions, minor improvements.
 
 ## What to Flag Aggressively
 
@@ -125,13 +125,13 @@ Be direct and practical. Focus on tests that catch regressions, not tests that i
 
 Good phrases:
 
-- `this error branch is never tested — the failure path is untested`
-- `the assertion passes even if the function returns the wrong value — too broad`
-- `this test depends on the system clock — will flake on slow CI`
-- `this test modifies a global config without cleanup — may break other tests`
-- `the mock returns success in all cases — error injection is missing`
-- `the test name says "valid input" but it tests three unrelated things — unclear scope`
-- `the test is 200 lines of setup with a single assert at the end — hard to see what's tested`
+- `this error branch is never tested ~ the failure path is untested`
+- `the assertion passes even if the function returns the wrong value ~ too broad`
+- `this test depends on the system clock ~ will flake on slow CI`
+- `this test modifies a global config without cleanup ~ may break other tests`
+- `the mock returns success in all cases ~ error injection is missing`
+- `the test name says "valid input" but it tests three unrelated things ~ unclear scope`
+- `the test is 200 lines of setup with a single assert at the end ~ hard to see what's tested`
 
 ## Approval Bar
 

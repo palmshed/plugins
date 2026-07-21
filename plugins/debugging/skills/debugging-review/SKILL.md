@@ -6,7 +6,7 @@ disable-model-invocation: true
 
 # Debugging Guide
 
-Use this skill for systematic debugging guidance. The goal is to help you find the root cause efficiently — not to guess at the answer, but to follow a structured process that leads to the right diagnosis.
+Use this skill for systematic debugging guidance. The goal is to help you find the root cause efficiently ~ not to guess at the answer, but to follow a structured process that leads to the right diagnosis.
 
 ## Core Prompt
 

@@ -19,14 +19,14 @@
 ## Manifest fields
 
 Required:
-- `name` — kebab-case identifier
+- `name` ~ kebab-case identifier
 
 Optional:
-- `version` — semver string
-- `description` — what the plugin does
-- `author` — `{ "name": "...", "email": "...", "url": "..." }`
-- `skills`, `commands`, `agents` — path or array of paths
-- `hooks`, `mcpServers`, `lspServers` — path or inline JSON
+- `version` ~ semver string
+- `description` ~ what the plugin does
+- `author` ~ `{ "name": "...", "email": "...", "url": "..." }`
+- `skills`, `commands`, `agents` ~ path or array of paths
+- `hooks`, `mcpServers`, `lspServers` ~ path or inline JSON
 
 ## Component conventions
 

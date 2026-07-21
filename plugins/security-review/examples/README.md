@@ -89,8 +89,8 @@ pub async fn delete_document(
 ```
 
 **Why this is bad:**
-- No authentication check — who is making this request?
-- No authorization check — does the user own this document?
+- No authentication check ~ who is making this request?
+- No authorization check ~ does the user own this document?
 - Any user can delete any document by guessing the UUID
 - This is an Insecure Direct Object Reference (IDOR) vulnerability
 
