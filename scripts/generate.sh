@@ -10,9 +10,12 @@ marketplace_file="$out_dir/marketplace.json"
 index_file="$out_dir/plugin-index.json"
 
 # Repository version from git tag or default
-REPO_VERSION="${GITHUB_REF_NAME:-dev}"
-# Strip leading 'v' if present
-REPO_VERSION="${REPO_VERSION#v}"
+# For non-tagged builds, use a fixed dev version to keep generated files deterministic
+if [[ "${GITHUB_REF:-}" == refs/tags/v* ]]; then
+  REPO_VERSION="${GITHUB_REF#refs/tags/v}"
+else
+  REPO_VERSION="0.0.0"
+fi
 
 mkdir -p "$out_dir"
 
