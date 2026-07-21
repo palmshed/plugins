@@ -1,8 +1,24 @@
 {
   "version": 1,
   "plugins": {
+    "api-review": {
+      "sha": "cffd5ffe37f34ecd56f07b3d38b5884b704319ae17286b36b5f5e9bebbb19cac",
+      "components": {
+        "skills": [
+            {
+              "name": "api-review",
+              "description": "Review API design for consistency, ergonomics, backward compatibility, and documentation quality. Use when designing a new API or reviewing changes to an existing one."
+            }
+        ],
+        "commands": [],
+        "agents": [],
+        "mcpServers": [],
+        "hooks": [],
+        "lspServers": []
+      }
+    },
     "code-review": {
-      "sha": "ecf181706f686765beed89eaa976e296b88be98852ab55985ba432d04b759a1f",
+      "sha": "abe2ec2fcf56fb1ab70d6b97dae41a697a5e25ab94ca05f40a21eb26e78ebe4d",
       "components": {
         "skills": [
             {
@@ -17,8 +33,40 @@
         "lspServers": []
       }
     },
+    "commit-review": {
+      "sha": "24d08ce1bf1f990fb9651b2c284c8a46c968fe7e729f7a41395c20dc40bcc482",
+      "components": {
+        "skills": [
+            {
+              "name": "commit-review",
+              "description": "Review commit messages and history for clarity, structure, and usefulness. Use when preparing to merge or auditing commit quality."
+            }
+        ],
+        "commands": [],
+        "agents": [],
+        "mcpServers": [],
+        "hooks": [],
+        "lspServers": []
+      }
+    },
+    "debugging": {
+      "sha": "da176cd76b0cea37ee175d89873afb23170439ac2b06be5f38c8f7cd160e36cf",
+      "components": {
+        "skills": [
+            {
+              "name": "debugging",
+              "description": "Guide systematic debugging for failures, tracing root causes, and verifying fixes. Use when investigating a bug, test failure, or unexpected behavior."
+            }
+        ],
+        "commands": [],
+        "agents": [],
+        "mcpServers": [],
+        "hooks": [],
+        "lspServers": []
+      }
+    },
     "documentation": {
-      "sha": "6e6fa77b70ad8b2780e28796e933371083fa6f3b03eaf2af6ebaba0000eac9cb",
+      "sha": "90141ce1fa109613be12e1278cffe48e0a794d41d0e885b57a6b7caaff96a93c",
       "components": {
         "skills": [
             {
@@ -34,7 +82,7 @@
       }
     },
     "performance-review": {
-      "sha": "f59c982d68a292b095ebde82a82ae74f2615776e61a65f95931b2c982a054a71",
+      "sha": "b0b7d1f3d3114189b067d764d90fa50bbf2520a96caddb4e1a2fbecd24c2f3ae",
       "components": {
         "skills": [
             {
@@ -50,7 +98,7 @@
       }
     },
     "security-review": {
-      "sha": "2bb0bfcb38a6d08229d7a2e3c9d32e0ee5027ba79acf285f09d2cbc153531e72",
+      "sha": "1786b00f6d258696c8dcae49346ab5e6f5423807c0e8c94d6af2a7ec2d1963e1",
       "components": {
         "skills": [
             {
@@ -66,7 +114,7 @@
       }
     },
     "system-design": {
-      "sha": "f433f03b79ccad4110d622359f34dac8e8ceae05fd41ef3d0b430daf4a38ffa7",
+      "sha": "658d3e39ef9f59c869f350c9c3f7cc707f87aff92892c6a45f24338c018e05ca",
       "components": {
         "skills": [
             {
@@ -82,7 +130,7 @@
       }
     },
     "testing": {
-      "sha": "1ca45c6f05689a6cc8228900ecdb8ebb2045e7e4316f995f28ac22009496d148",
+      "sha": "b18160aba26a857e65f129e43686d1cf2ba2c25b951e1d8c9a90d3d5257d4e63",
       "components": {
         "skills": [
             {

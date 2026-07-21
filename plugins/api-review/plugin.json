@@ -1,0 +1,9 @@
+{
+  "name": "api-review",
+  "description": "Review API design for consistency, ergonomics, backward compatibility, and documentation quality",
+  "version": "1.0.0",
+  "author": {
+    "name": "Palmshed"
+  },
+  "skills": "./skills"
+}

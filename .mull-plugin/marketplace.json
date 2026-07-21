@@ -7,9 +7,24 @@
   },
   "plugins": [
     {
+      "name": "api-review",
+      "description": "Review API design for consistency, ergonomics, backward compatibility, and documentation quality",
+      "source": "./plugins/api-review"
+    },
+    {
       "name": "code-review",
       "description": "Extremely strict maintainability review for abstraction quality, file size, and spaghetti-condition growth",
       "source": "./plugins/code-review"
+    },
+    {
+      "name": "commit-review",
+      "description": "Review commit messages and history for clarity, structure, and usefulness for future readers",
+      "source": "./plugins/commit-review"
+    },
+    {
+      "name": "debugging",
+      "description": "Systematic debugging guidance for diagnosing failures, tracing root causes, and verifying fixes",
+      "source": "./plugins/debugging"
     },
     {
       "name": "documentation",

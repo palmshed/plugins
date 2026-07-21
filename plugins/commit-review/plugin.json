@@ -1,0 +1,9 @@
+{
+  "name": "commit-review",
+  "description": "Review commit messages and history for clarity, structure, and usefulness for future readers",
+  "version": "1.0.0",
+  "author": {
+    "name": "Palmshed"
+  },
+  "skills": "./skills"
+}

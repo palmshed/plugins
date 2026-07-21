@@ -1,0 +1,9 @@
+{
+  "name": "debugging",
+  "description": "Systematic debugging guidance for diagnosing failures, tracing root causes, and verifying fixes",
+  "version": "1.0.0",
+  "author": {
+    "name": "Palmshed"
+  },
+  "skills": "./skills"
+}
