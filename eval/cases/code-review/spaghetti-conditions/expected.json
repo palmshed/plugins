@@ -1,0 +1,14 @@
+{
+  "findings": [
+    {
+      "id": "maintainability.spaghetti-conditions",
+      "severity": "high",
+      "category": "maintainability",
+      "title": "Deeply nested conditional logic in process_user",
+      "location": {
+        "path": "input.rs",
+        "start_line": 3
+      }
+    }
+  ]
+}

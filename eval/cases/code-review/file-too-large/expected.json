@@ -1,0 +1,14 @@
+{
+  "findings": [
+    {
+      "id": "maintainability.function-too-long",
+      "severity": "medium",
+      "category": "maintainability",
+      "title": "calculate_metrics function does too many things",
+      "location": {
+        "path": "input.rs",
+        "start_line": 1
+      }
+    }
+  ]
+}

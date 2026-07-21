@@ -52,6 +52,14 @@ Every plugin must satisfy this checklist before release.
 - [ ] Examples explain why the pattern is good or bad
 - [ ] Examples cover multiple categories from the SKILL.md
 
+## Evaluation Cases
+
+- [ ] At least one evaluation case with input code
+- [ ] At least one evaluation case with expected findings (expected.json)
+- [ ] At least one negative case (no findings expected, for false positive testing)
+- [ ] Evaluation cases cover the plugin's primary categories
+- [ ] `bash eval/runner.sh <plugin-name>` passes
+
 ## Versioning
 
 - [ ] plugin.json has a valid semver version

@@ -1,0 +1,34 @@
+{
+  "findings": [
+    {
+      "id": "security.sql-injection",
+      "severity": "error",
+      "category": "security",
+      "title": "SQL injection via string interpolation in find_user",
+      "location": {
+        "path": "input.rs",
+        "start_line": 5
+      }
+    },
+    {
+      "id": "security.sql-injection",
+      "severity": "error",
+      "category": "security",
+      "title": "SQL injection via string interpolation in create_order insert",
+      "location": {
+        "path": "input.rs",
+        "start_line": 14
+      }
+    },
+    {
+      "id": "security.sql-injection",
+      "severity": "error",
+      "category": "security",
+      "title": "SQL injection via string interpolation in create_order query",
+      "location": {
+        "path": "input.rs",
+        "start_line": 17
+      }
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "findings": [
+    {
+      "id": "performance.n-plus-one-query",
+      "severity": "high",
+      "category": "performance",
+      "title": "N+1 query pattern in get_users_with_orders",
+      "location": {
+        "path": "input.rs",
+        "start_line": 9
+      }
+    }
+  ]
+}
