@@ -1,0 +1,50 @@
+name: Documentation Maintenance
+
+on:
+  schedule:
+    # Run weekly on Monday at 9am UTC
+    - cron: '0 9 * * 1'
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Regenerate marketplace files
+        run: bash scripts/generate.sh
+
+      - name: Validate plugins
+        run: bash scripts/validate.sh
+
+      - name: Check documentation freshness
+        id: freshness
+        run: bash scripts/docs-freshness.sh || true
+
+      - name: Check for changes
+        id: changes
+        run: |
+          if git diff --quiet; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Create pull request
+        if: steps.changes.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "docs: update generated documentation"
+          title: "docs: update generated documentation"
+          body: |
+            Automated documentation update from scheduled maintenance.
+            
+            Changes:
+            - Regenerated marketplace files
+            - Updated any stale documentation
+            
+            This PR was created automatically by the documentation maintenance workflow.
+          branch: docs/maintenance-update
+          delete-branch: true

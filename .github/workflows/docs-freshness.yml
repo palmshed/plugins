@@ -1,0 +1,22 @@
+name: Documentation Freshness
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+jobs:
+  freshness:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Regenerate marketplace files
+        run: bash scripts/generate.sh
+
+      - name: Validate plugins
+        run: bash scripts/validate.sh
+
+      - name: Check documentation freshness
+        run: bash scripts/docs-freshness.sh
