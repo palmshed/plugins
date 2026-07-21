@@ -1,0 +1,9 @@
+{
+  "name": "documentation",
+  "description": "Review documentation quality, accuracy, and completeness for your changes",
+  "version": "1.0.0",
+  "author": {
+    "name": "Palmshed"
+  },
+  "skills": "./skills"
+}

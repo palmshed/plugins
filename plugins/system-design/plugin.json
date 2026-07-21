@@ -1,0 +1,9 @@
+{
+  "name": "system-design",
+  "description": "Architectural review covering module boundaries, coupling, scalability, and design clarity",
+  "version": "1.0.0",
+  "author": {
+    "name": "Palmshed"
+  },
+  "skills": "./skills"
+}

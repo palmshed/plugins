@@ -1,0 +1,9 @@
+{
+  "name": "performance-review",
+  "description": "Identify performance regressions, slow code paths, and resource waste in your changes",
+  "version": "1.0.0",
+  "author": {
+    "name": "Palmshed"
+  },
+  "skills": "./skills"
+}

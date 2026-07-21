@@ -1,0 +1,9 @@
+{
+  "name": "security-review",
+  "description": "Security-focused code review for injection, authentication, data exposure, and supply-chain risks",
+  "version": "1.0.0",
+  "author": {
+    "name": "Palmshed"
+  },
+  "skills": "./skills"
+}

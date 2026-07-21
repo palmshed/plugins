@@ -10,6 +10,31 @@
       "name": "code-review",
       "description": "Extremely strict maintainability review for abstraction quality, file size, and spaghetti-condition growth",
       "source": "./plugins/code-review"
+    },
+    {
+      "name": "security-review",
+      "description": "Security-focused code review for injection, authentication, data exposure, and supply-chain risks",
+      "source": "./plugins/security-review"
+    },
+    {
+      "name": "performance-review",
+      "description": "Identify performance regressions, slow code paths, and resource waste in your changes",
+      "source": "./plugins/performance-review"
+    },
+    {
+      "name": "testing",
+      "description": "Review test coverage, quality, and gaps across your changes",
+      "source": "./plugins/testing"
+    },
+    {
+      "name": "documentation",
+      "description": "Review documentation quality, accuracy, and completeness for your changes",
+      "source": "./plugins/documentation"
+    },
+    {
+      "name": "system-design",
+      "description": "Architectural review covering module boundaries, coupling, scalability, and design clarity",
+      "source": "./plugins/system-design"
     }
   ]
 }

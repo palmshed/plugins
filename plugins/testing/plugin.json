@@ -1,0 +1,9 @@
+{
+  "name": "testing",
+  "description": "Review test coverage, quality, and gaps across your changes",
+  "version": "1.0.0",
+  "author": {
+    "name": "Palmshed"
+  },
+  "skills": "./skills"
+}

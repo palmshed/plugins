@@ -16,6 +16,86 @@
         "hooks": [],
         "lspServers": []
       }
+    },
+    "security-review": {
+      "sha": "pending",
+      "components": {
+        "skills": [
+          {
+            "name": "security-review",
+            "description": "Security-focused code review for injection, authentication, data exposure, and supply-chain risks"
+          }
+        ],
+        "commands": [],
+        "agents": [],
+        "mcpServers": [],
+        "hooks": [],
+        "lspServers": []
+      }
+    },
+    "performance-review": {
+      "sha": "pending",
+      "components": {
+        "skills": [
+          {
+            "name": "performance-review",
+            "description": "Identify performance regressions, slow code paths, and resource waste in your changes"
+          }
+        ],
+        "commands": [],
+        "agents": [],
+        "mcpServers": [],
+        "hooks": [],
+        "lspServers": []
+      }
+    },
+    "testing": {
+      "sha": "pending",
+      "components": {
+        "skills": [
+          {
+            "name": "testing-review",
+            "description": "Review test coverage, quality, and gaps across your changes"
+          }
+        ],
+        "commands": [],
+        "agents": [],
+        "mcpServers": [],
+        "hooks": [],
+        "lspServers": []
+      }
+    },
+    "documentation": {
+      "sha": "pending",
+      "components": {
+        "skills": [
+          {
+            "name": "documentation-review",
+            "description": "Review documentation quality, accuracy, and completeness for your changes"
+          }
+        ],
+        "commands": [],
+        "agents": [],
+        "mcpServers": [],
+        "hooks": [],
+        "lspServers": []
+      }
+    },
+    "system-design": {
+      "sha": "pending",
+      "components": {
+        "skills": [
+          {
+            "name": "system-design-review",
+            "description": "Architectural review covering module boundaries, coupling, scalability, and design clarity"
+          }
+        ],
+        "commands": [],
+        "agents": [],
+        "mcpServers": [],
+        "hooks": [],
+        "lspServers": []
+      }
     }
   }
 }
