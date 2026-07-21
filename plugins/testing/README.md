@@ -39,6 +39,13 @@ Severity-rated findings (critical / high / medium / low / informational), each w
 - Cannot assess test execution speed
 - Focuses on test design, not test infrastructure
 
+## Compatibility
+
+- **Mull version**: 1.0.0 or later
+- **Plugin version**: 1.0.0
+- **Breaking changes**: None in this version
+- **Migration notes**: N/A (initial release)
+
 ## Install
 
 ```sh

@@ -37,6 +37,13 @@ A description of the observed failure or unexpected behavior.
 - Requires you to provide symptoms and observations
 - Effectiveness depends on the quality of the bug report
 
+## Compatibility
+
+- **Mull version**: 1.0.0 or later
+- **Plugin version**: 1.0.0
+- **Breaking changes**: None in this version
+- **Migration notes**: N/A (initial release)
+
 ## Install
 
 ```sh

@@ -38,6 +38,13 @@ Severity-rated findings (critical / high / medium / low / informational), each w
 - Focuses on design quality, not performance
 - Does not validate OpenAPI/AsyncAPI specs automatically
 
+## Compatibility
+
+- **Mull version**: 1.0.0 or later
+- **Plugin version**: 1.0.0
+- **Breaking changes**: None in this version
+- **Migration notes**: N/A (initial release)
+
 ## Install
 
 ```sh

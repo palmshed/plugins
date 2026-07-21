@@ -39,6 +39,13 @@ Severity-rated findings (critical / high / medium / low / informational), each w
 - Focuses on content accuracy, not writing style
 - Does not check for broken links outside the diff
 
+## Compatibility
+
+- **Mull version**: 1.0.0 or later
+- **Plugin version**: 1.0.0
+- **Breaking changes**: None in this version
+- **Migration notes**: N/A (initial release)
+
 ## Install
 
 ```sh

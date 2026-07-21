@@ -170,6 +170,24 @@ for dir in "${plugin_dirs[@]}"; do
   else
     pass "Found $skill_count skill(s)"
   fi
+
+  # 6. README.md exists and is not empty
+  if [ ! -f "${dir}README.md" ]; then
+    fail "$dirname: Missing README.md"
+  elif [ ! -s "${dir}README.md" ]; then
+    fail "$dirname: README.md is empty"
+  else
+    pass "README.md present"
+  fi
+
+  # 7. CHANGELOG.md exists and is not empty
+  if [ ! -f "${dir}CHANGELOG.md" ]; then
+    fail "$dirname: Missing CHANGELOG.md"
+  elif [ ! -s "${dir}CHANGELOG.md" ]; then
+    fail "$dirname: CHANGELOG.md is empty"
+  else
+    pass "CHANGELOG.md present"
+  fi
 done
 
 # --- Marketplace validation ---

@@ -43,6 +43,13 @@ Each finding includes the location, what is wrong, and a concrete fix.
 - Strict by design — will flag things that are fine in context
 - Does not replace domain-specific review
 
+## Compatibility
+
+- **Mull version**: 1.0.0 or later
+- **Plugin version**: 1.0.0
+- **Breaking changes**: None in this version
+- **Migration notes**: N/A (initial release)
+
 ## Install
 
 ```sh
