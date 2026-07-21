@@ -1,0 +1,24 @@
+{
+  "findings": [
+    {
+      "id": "api.naming-inconsistency",
+      "severity": "medium",
+      "category": "api-design",
+      "title": "Inconsistent naming convention in User struct fields",
+      "location": {
+        "path": "input.rs",
+        "start_line": 2
+      }
+    },
+    {
+      "id": "api.naming-inconsistency",
+      "severity": "medium",
+      "category": "api-design",
+      "title": "Function naming inconsistency: get_user vs fetch_user_data",
+      "location": {
+        "path": "input.rs",
+        "start_line": 9
+      }
+    }
+  ]
+}

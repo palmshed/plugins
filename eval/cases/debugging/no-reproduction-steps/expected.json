@@ -1,0 +1,14 @@
+{
+  "findings": [
+    {
+      "id": "debugging.no-reproduction-steps",
+      "severity": "medium",
+      "category": "debugging",
+      "title": "Division by zero possible when no items exceed threshold",
+      "location": {
+        "path": "input.rs",
+        "start_line": 16
+      }
+    }
+  ]
+}

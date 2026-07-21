@@ -1,0 +1,34 @@
+{
+  "findings": [
+    {
+      "id": "testing.missing-tests",
+      "severity": "high",
+      "category": "testing",
+      "title": "No test coverage for parse_config function",
+      "location": {
+        "path": "input.rs",
+        "start_line": 1
+      }
+    },
+    {
+      "id": "testing.missing-tests",
+      "severity": "high",
+      "category": "testing",
+      "title": "No test coverage for validate_email function",
+      "location": {
+        "path": "input.rs",
+        "start_line": 18
+      }
+    },
+    {
+      "id": "testing.missing-tests",
+      "severity": "high",
+      "category": "testing",
+      "title": "No test coverage for calculate_hash function",
+      "location": {
+        "path": "input.rs",
+        "start_line": 22
+      }
+    }
+  ]
+}

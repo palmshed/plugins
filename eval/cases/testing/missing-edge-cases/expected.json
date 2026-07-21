@@ -1,0 +1,24 @@
+{
+  "findings": [
+    {
+      "id": "testing.missing-edge-case",
+      "severity": "medium",
+      "category": "testing",
+      "title": "Test suite missing error case: invalid format",
+      "location": {
+        "path": "input.rs",
+        "start_line": 3
+      }
+    },
+    {
+      "id": "testing.missing-edge-case",
+      "severity": "medium",
+      "category": "testing",
+      "title": "Test suite missing edge case: empty input",
+      "location": {
+        "path": "input.rs",
+        "start_line": 3
+      }
+    }
+  ]
+}

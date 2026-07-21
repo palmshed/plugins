@@ -1,0 +1,14 @@
+{
+  "findings": [
+    {
+      "id": "commit.message-too-long",
+      "severity": "medium",
+      "category": "commit-message",
+      "title": "Commit message exceeds recommended 72 character limit",
+      "location": {
+        "path": "input.txt",
+        "start_line": 1
+      }
+    }
+  ]
+}

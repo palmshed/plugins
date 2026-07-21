@@ -1,0 +1,14 @@
+{
+  "findings": [
+    {
+      "id": "api breaking-change",
+      "severity": "high",
+      "category": "api-design",
+      "title": "API function signatures would break with parameter reordering",
+      "location": {
+        "path": "input.rs",
+        "start_line": 6
+      }
+    }
+  ]
+}

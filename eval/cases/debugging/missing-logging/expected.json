@@ -1,0 +1,24 @@
+{
+  "findings": [
+    {
+      "id": "debugging.missing-logging",
+      "severity": "medium",
+      "category": "debugging",
+      "title": "No error handling for fetch_data failure",
+      "location": {
+        "path": "input.rs",
+        "start_line": 5
+      }
+    },
+    {
+      "id": "debugging.missing-logging",
+      "severity": "low",
+      "category": "debugging",
+      "title": "Timing information printed to stdout instead of proper logger",
+      "location": {
+        "path": "input.rs",
+        "start_line": 10
+      }
+    }
+  ]
+}

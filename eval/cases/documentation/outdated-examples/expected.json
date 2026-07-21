@@ -1,0 +1,14 @@
+{
+  "findings": [
+    {
+      "id": "docs.outdated-example",
+      "severity": "low",
+      "category": "documentation",
+      "title": "Example for divide does not show edge case",
+      "location": {
+        "path": "input.rs",
+        "start_line": 13
+      }
+    }
+  ]
+}

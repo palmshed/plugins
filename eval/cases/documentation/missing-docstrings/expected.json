@@ -1,0 +1,34 @@
+{
+  "findings": [
+    {
+      "id": "docs.missing-docstring",
+      "severity": "medium",
+      "category": "documentation",
+      "title": "Public function process_data lacks doc comment",
+      "location": {
+        "path": "input.rs",
+        "start_line": 1
+      }
+    },
+    {
+      "id": "docs.missing-docstring",
+      "severity": "medium",
+      "category": "documentation",
+      "title": "Public struct Config lacks doc comment",
+      "location": {
+        "path": "input.rs",
+        "start_line": 5
+      }
+    },
+    {
+      "id": "docs.missing-docstring",
+      "severity": "medium",
+      "category": "documentation",
+      "title": "Public function connect lacks doc comment",
+      "location": {
+        "path": "input.rs",
+        "start_line": 11
+      }
+    }
+  ]
+}

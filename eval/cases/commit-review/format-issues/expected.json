@@ -1,0 +1,44 @@
+{
+  "findings": [
+    {
+      "id": "commit.missing-type",
+      "severity": "medium",
+      "category": "commit-message",
+      "title": "Commit message lacks conventional commit type prefix",
+      "location": {
+        "path": "input.txt",
+        "start_line": 1
+      }
+    },
+    {
+      "id": "commit.ambiguous-message",
+      "severity": "medium",
+      "category": "commit-message",
+      "title": "Commit message 'fix stuff' is too vague to be useful",
+      "location": {
+        "path": "input.txt",
+        "start_line": 1
+      }
+    },
+    {
+      "id": "commit.wip-message",
+      "severity": "low",
+      "category": "commit-message",
+      "title": "WIP commit should be squashed before merge",
+      "location": {
+        "path": "input.txt",
+        "start_line": 5
+      }
+    },
+    {
+      "id": "commit.too-many-changes",
+      "severity": "high",
+      "category": "commit-message",
+      "title": "Commit message describes multiple unrelated changes",
+      "location": {
+        "path": "input.txt",
+        "start_line": 7
+      }
+    }
+  ]
+}

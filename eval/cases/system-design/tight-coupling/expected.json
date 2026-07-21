@@ -1,0 +1,24 @@
+{
+  "findings": [
+    {
+      "id": "design.tight-coupling",
+      "severity": "high",
+      "category": "system-design",
+      "title": "UserService directly depends on 5 different services",
+      "location": {
+        "path": "input.rs",
+        "start_line": 4
+      }
+    },
+    {
+      "id": "design.violation-single-responsibility",
+      "severity": "medium",
+      "category": "system-design",
+      "title": "UserService handles caching, logging, email, and database",
+      "location": {
+        "path": "input.rs",
+        "start_line": 4
+      }
+    }
+  ]
+}

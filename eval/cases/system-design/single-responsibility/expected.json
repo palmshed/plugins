@@ -1,0 +1,14 @@
+{
+  "findings": [
+    {
+      "id": "design.violation-single-responsibility",
+      "severity": "high",
+      "category": "system-design",
+      "title": "OrderProcessor handles 6 different concerns",
+      "location": {
+        "path": "input.rs",
+        "start_line": 1
+      }
+    }
+  ]
+}
