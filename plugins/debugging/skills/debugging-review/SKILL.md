@@ -1,5 +1,5 @@
 ---
-name: debugging
+name: debugging-review
 description: Guide systematic debugging for failures, tracing root causes, and verifying fixes. Use when investigating a bug, test failure, or unexpected behavior.
 disable-model-invocation: true
 ---

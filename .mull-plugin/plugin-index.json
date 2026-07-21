@@ -50,11 +50,11 @@
       }
     },
     "debugging": {
-      "sha": "62c71dd6bc12a498ad0c8d40ffa2661b80f6043278e3fef9ce8aabb3106ea32e",
+      "sha": "15e3ef98b570c62985d55c68db7686daab1fb6b290972b0507ee2fa4c36f071a",
       "components": {
         "skills": [
             {
-              "name": "debugging",
+              "name": "debugging-review",
               "description": "Guide systematic debugging for failures, tracing root causes, and verifying fixes. Use when investigating a bug, test failure, or unexpected behavior."
             }
         ],
