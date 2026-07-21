@@ -6,8 +6,10 @@ Official plugin marketplace for [Mull](https://github.com/palmshed/mull).
 
 1. Create a directory under `plugins/` with a kebab-case name
 2. Add a `plugin.json` manifest and your plugin content (skills, commands, agents, etc.)
-3. Register it in `.mull-plugin/marketplace.json`
-4. Open a PR
+3. Add a `README.md` and `CHANGELOG.md`
+4. Run `bash scripts/generate.sh` to regenerate marketplace files
+5. Run `bash scripts/validate.sh` to verify
+6. Open a PR
 
 ## Plugin structure
 

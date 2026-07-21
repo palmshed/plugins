@@ -5,9 +5,10 @@
 1. Create a directory under `plugins/` with a kebab-case name
 2. Add a `plugin.json` manifest with at least `name` and `description`
 3. Add your components (skills, commands, agents, MCP servers)
-4. Register it in `.mull-plugin/marketplace.json`
-5. Add an entry to `.mull-plugin/plugin-index.json`
-6. Open a PR
+4. Add a `README.md` and `CHANGELOG.md`
+5. Run `bash scripts/generate.sh` to regenerate marketplace files
+6. Run `bash scripts/validate.sh` to verify
+7. Open a PR
 
 ## Plugin name rules
 

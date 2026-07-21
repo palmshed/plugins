@@ -112,17 +112,9 @@ Your markdown body goes here.</code></pre>
 
       <section>
         <h2>Register in the marketplace</h2>
-        <p>Add your plugin to <code>.mull-plugin/marketplace.json</code> in the repo root.</p>
-        <pre><code>{
-  "name": "Palmshed Official",
-  "plugins": [
-    {
-      "name": "my-plugin",
-      "description": "What it does",
-      "source": "./plugins/my-plugin"
-    }
-  ]
-}</code></pre>
+        <p>Run the generator to add your plugin to the marketplace index:</p>
+        <pre><code>bash scripts/generate.sh</code></pre>
+        <p class="subtext">This produces <code>.mull-plugin/marketplace.json</code> and <code>.mull-plugin/plugin-index.json</code> from the plugin directories. Never edit these files manually.</p>
       </section>
 
       <section>
