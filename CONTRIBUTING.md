@@ -2,13 +2,19 @@
 
 ## Adding a plugin
 
-1. Create a directory under `plugins/` with a kebab-case name
-2. Add a `plugin.json` manifest with at least `name` and `description`
-3. Add your components (skills, commands, agents, MCP servers)
-4. Add a `README.md` and `CHANGELOG.md`
-5. Run `bash scripts/generate.sh` to regenerate marketplace files
+1. Scaffold a new plugin:
+   ```bash
+   bash scripts/scaffold.sh my-plugin
+   ```
+2. Edit `plugins/my-plugin/plugin.json` with description and author
+3. Edit `plugins/my-plugin/skills/my-plugin-review/SKILL.md` with review instructions
+4. Add examples to `plugins/my-plugin/examples/`
+5. Add evaluation cases to `eval/cases/my-plugin-review/`
 6. Run `bash scripts/validate.sh` to verify
-7. Open a PR
+7. Run `bash scripts/generate.sh` to regenerate marketplace files
+8. Open a PR
+
+See the [Plugin Author Guide](./docs/plugin-author-guide.md) for detailed instructions.
 
 ## Plugin name rules
 
