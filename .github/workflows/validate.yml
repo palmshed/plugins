@@ -14,3 +14,20 @@ jobs:
 
       - name: Validate plugin repository
         run: bash scripts/validate.sh
+
+      - name: Verify generated files are up to date
+        run: |
+          cp .mull-plugin/marketplace.json /tmp/marketplace-before.json
+          cp .mull-plugin/plugin-index.json /tmp/index-before.json
+          bash scripts/generate.sh
+          if ! diff -q /tmp/marketplace-before.json .mull-plugin/marketplace.json > /dev/null 2>&1; then
+            echo "✗ marketplace.json is out of date. Run 'bash scripts/generate.sh' and commit."
+            diff /tmp/marketplace-before.json .mull-plugin/marketplace.json || true
+            exit 1
+          fi
+          if ! diff -q /tmp/index-before.json .mull-plugin/plugin-index.json > /dev/null 2>&1; then
+            echo "✗ plugin-index.json is out of date. Run 'bash scripts/generate.sh' and commit."
+            diff /tmp/index-before.json .mull-plugin/plugin-index.json || true
+            exit 1
+          fi
+          echo "✓ Generated files are up to date"

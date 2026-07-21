@@ -12,9 +12,9 @@
       "source": "./plugins/code-review"
     },
     {
-      "name": "security-review",
-      "description": "Security-focused code review for injection, authentication, data exposure, and supply-chain risks",
-      "source": "./plugins/security-review"
+      "name": "documentation",
+      "description": "Review documentation quality, accuracy, and completeness for your changes",
+      "source": "./plugins/documentation"
     },
     {
       "name": "performance-review",
@@ -22,19 +22,19 @@
       "source": "./plugins/performance-review"
     },
     {
-      "name": "testing",
-      "description": "Review test coverage, quality, and gaps across your changes",
-      "source": "./plugins/testing"
-    },
-    {
-      "name": "documentation",
-      "description": "Review documentation quality, accuracy, and completeness for your changes",
-      "source": "./plugins/documentation"
+      "name": "security-review",
+      "description": "Security-focused code review for injection, authentication, data exposure, and supply-chain risks",
+      "source": "./plugins/security-review"
     },
     {
       "name": "system-design",
       "description": "Architectural review covering module boundaries, coupling, scalability, and design clarity",
       "source": "./plugins/system-design"
+    },
+    {
+      "name": "testing",
+      "description": "Review test coverage, quality, and gaps across your changes",
+      "source": "./plugins/testing"
     }
   ]
 }

@@ -2,61 +2,13 @@
   "version": 1,
   "plugins": {
     "code-review": {
-      "sha": "9b3ebc0fbf60d37e9d20bc7e346c0e0f41e12d81",
+      "sha": "ecf181706f686765beed89eaa976e296b88be98852ab55985ba432d04b759a1f",
       "components": {
         "skills": [
-          {
-            "name": "code-review",
-            "description": "Strict maintainability review for abstraction quality, file size, and spaghetti-condition growth"
-          }
-        ],
-        "commands": [],
-        "agents": [],
-        "mcpServers": [],
-        "hooks": [],
-        "lspServers": []
-      }
-    },
-    "security-review": {
-      "sha": "pending",
-      "components": {
-        "skills": [
-          {
-            "name": "security-review",
-            "description": "Security-focused code review for injection, authentication, data exposure, and supply-chain risks"
-          }
-        ],
-        "commands": [],
-        "agents": [],
-        "mcpServers": [],
-        "hooks": [],
-        "lspServers": []
-      }
-    },
-    "performance-review": {
-      "sha": "pending",
-      "components": {
-        "skills": [
-          {
-            "name": "performance-review",
-            "description": "Identify performance regressions, slow code paths, and resource waste in your changes"
-          }
-        ],
-        "commands": [],
-        "agents": [],
-        "mcpServers": [],
-        "hooks": [],
-        "lspServers": []
-      }
-    },
-    "testing": {
-      "sha": "pending",
-      "components": {
-        "skills": [
-          {
-            "name": "testing-review",
-            "description": "Review test coverage, quality, and gaps across your changes"
-          }
+            {
+              "name": "code-review",
+              "description": "Run an extremely strict maintainability review for abstraction quality, giant files, and spaghetti-condition growth. Use for a deep code quality audit or an especially harsh maintainability review."
+            }
         ],
         "commands": [],
         "agents": [],
@@ -66,13 +18,45 @@
       }
     },
     "documentation": {
-      "sha": "pending",
+      "sha": "6e6fa77b70ad8b2780e28796e933371083fa6f3b03eaf2af6ebaba0000eac9cb",
       "components": {
         "skills": [
-          {
-            "name": "documentation-review",
-            "description": "Review documentation quality, accuracy, and completeness for your changes"
-          }
+            {
+              "name": "documentation-review",
+              "description": "Review documentation quality, accuracy, and completeness for your changes. Use when auditing docs, READMEs, comments, or API documentation."
+            }
+        ],
+        "commands": [],
+        "agents": [],
+        "mcpServers": [],
+        "hooks": [],
+        "lspServers": []
+      }
+    },
+    "performance-review": {
+      "sha": "f59c982d68a292b095ebde82a82ae74f2615776e61a65f95931b2c982a054a71",
+      "components": {
+        "skills": [
+            {
+              "name": "performance-review",
+              "description": "Run a performance-focused code review for regressions, allocations, I/O waste, and algorithmic issues. Use when auditing a changeset for speed or doing a hardening pass."
+            }
+        ],
+        "commands": [],
+        "agents": [],
+        "mcpServers": [],
+        "hooks": [],
+        "lspServers": []
+      }
+    },
+    "security-review": {
+      "sha": "2bb0bfcb38a6d08229d7a2e3c9d32e0ee5027ba79acf285f09d2cbc153531e72",
+      "components": {
+        "skills": [
+            {
+              "name": "security-review",
+              "description": "Run a security-focused code review covering injection, authentication, data exposure, cryptography, and supply-chain risks. Use when auditing a changeset for vulnerabilities or doing a hardening pass."
+            }
         ],
         "commands": [],
         "agents": [],
@@ -82,13 +66,29 @@
       }
     },
     "system-design": {
-      "sha": "pending",
+      "sha": "f433f03b79ccad4110d622359f34dac8e8ceae05fd41ef3d0b430daf4a38ffa7",
       "components": {
         "skills": [
-          {
-            "name": "system-design-review",
-            "description": "Architectural review covering module boundaries, coupling, scalability, and design clarity"
-          }
+            {
+              "name": "system-design-review",
+              "description": "Architectural review covering module boundaries, coupling, scalability, and design clarity. Use when auditing structural changes or doing a design review."
+            }
+        ],
+        "commands": [],
+        "agents": [],
+        "mcpServers": [],
+        "hooks": [],
+        "lspServers": []
+      }
+    },
+    "testing": {
+      "sha": "1ca45c6f05689a6cc8228900ecdb8ebb2045e7e4316f995f28ac22009496d148",
+      "components": {
+        "skills": [
+            {
+              "name": "testing-review",
+              "description": "Review test coverage, quality, and gaps for your changes. Use when auditing whether a changeset is well-tested."
+            }
         ],
         "commands": [],
         "agents": [],
